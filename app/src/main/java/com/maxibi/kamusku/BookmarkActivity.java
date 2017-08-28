@@ -4,12 +4,11 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
-
-import com.maxibi.kamusku.DatabaseAccess;
 
 import java.util.ArrayList;
 
@@ -18,6 +17,11 @@ public class BookmarkActivity extends AppCompatActivity {
 
     public ListView listView;
     TextView textView;
+    DatabaseAccess databaseAccess;
+    ArrayList<Word> quotes;
+    CustomAdapter customAdapter;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,11 +32,11 @@ public class BookmarkActivity extends AppCompatActivity {
         listView = (ListView) findViewById(R.id.listView);
         textView = (TextView) findViewById(R.id.test);
 
-        final DatabaseAccess databaseAccess = DatabaseAccess.getInstance(this);
+        databaseAccess = DatabaseAccess.getInstance(this);
         databaseAccess.open();
-        final ArrayList<Word> quotes = databaseAccess.getQuotes(); // dapatkan semua qoutes
+        quotes = databaseAccess.getQuotesForBookmark(); // dapatkan semua qoutes
 
-        final CustomAdapter customAdapter = new CustomAdapter(this, quotes, R.layout.list_item_bookmark);
+        customAdapter = new CustomAdapter(this, quotes);
 
         listView.setAdapter(customAdapter);
 
@@ -55,5 +59,20 @@ public class BookmarkActivity extends AppCompatActivity {
             }
         });
 
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        databaseAccess.open();
+        quotes = databaseAccess.getQuotes();
+        customAdapter.refresh(quotes);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        setTitle("My new title");
+        return true;
     }
 }

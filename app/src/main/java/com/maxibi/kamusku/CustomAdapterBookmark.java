@@ -17,10 +17,10 @@ import java.util.Locale;
 import java.util.Set;
 
 /**
- * Created by User on 8/14/2017.
+ * Created by User on 8/28/2017.
  */
 
-public class CustomAdapter extends BaseAdapter implements Filterable, SectionIndexer {
+public class CustomAdapterBookmark extends BaseAdapter implements Filterable, SectionIndexer {
 
     String[] sections;
     int layout;
@@ -30,14 +30,14 @@ public class CustomAdapter extends BaseAdapter implements Filterable, SectionInd
     private HashMap<String,Integer> mapIndex;
 
     //Constructor
-    public CustomAdapter(Context context, ArrayList<Word> wordArrayList) {
+    public CustomAdapterBookmark(Context context, ArrayList<Word> wordArrayList){
         this.context = context;
         this.wordArrayList = wordArrayList;
         this.arrayList = wordArrayList;
 
-       /////////////////////////////////////////////////////////
-       ///// THUMB INDEXER /////
-       ///////////////////////
+        /////////////////////////////////////////////////////////
+        ///// THUMB INDEXER /////
+        ///////////////////////
 
         mapIndex = new HashMap<String ,Integer>();
         for( int i = 0; i < wordArrayList.size(); i++)
@@ -59,7 +59,7 @@ public class CustomAdapter extends BaseAdapter implements Filterable, SectionInd
 
         //create a list from the set to sort
         ArrayList<String> sectionList = new ArrayList<String>(sectionLetters);
-       // Log.d("SectionList"," "+sectionList.toString());
+        // Log.d("SectionList"," "+sectionList.toString());
 
         //Collection.sort ni untuk susun huruf dari A-Z secara menaik
         Collections.sort(sectionList);
@@ -68,15 +68,15 @@ public class CustomAdapter extends BaseAdapter implements Filterable, SectionInd
         sectionList.toArray(sections); //masukkan ke dalam "sections" array
 
         ///////////////////////////////////////Debug process
-                //    for( int i = 0; i< sections.length;i++){
-                     //   Log.d("sections"," "+sections[i]);
-                   // }
+        //    for( int i = 0; i< sections.length;i++){
+        //   Log.d("sections"," "+sections[i]);
+        // }
         ///////////////////////////////////////////
     }
 
     @Override
     public int getCount() {
-       return wordArrayList.size();
+        return wordArrayList.size();
     }
 
     @Override
@@ -92,17 +92,17 @@ public class CustomAdapter extends BaseAdapter implements Filterable, SectionInd
     @Override
     public View getView(int i, View view, ViewGroup viewGroup) {
 
-        ViewHolder viewHolder;
+        CustomAdapterBookmark.ViewHolder viewHolder;
         if (view == null) {
             view = LayoutInflater.from(context).inflate(R.layout.list_item, null);
 
-            viewHolder = new ViewHolder(view);
+            viewHolder = new CustomAdapterBookmark.ViewHolder(view);
             view.setTag(viewHolder);
         } else {
-            viewHolder = (ViewHolder) view.getTag();
+            viewHolder = (CustomAdapterBookmark.ViewHolder) view.getTag();
         }
 
-                viewHolder.itemName.setText(wordArrayList.get(i).bm);
+        viewHolder.itemName.setText(wordArrayList.get(i).bm);
 
 
 
@@ -128,7 +128,7 @@ public class CustomAdapter extends BaseAdapter implements Filterable, SectionInd
                     filterResults.count = arrayList.size();
                     filterResults.values = arrayList;
 
-                   // Log.d("abc", "running 00000000000000000000000000000000: ");
+                    // Log.d("abc", "running 00000000000000000000000000000000: ");
                 }
                 else
                 {
@@ -157,7 +157,7 @@ public class CustomAdapter extends BaseAdapter implements Filterable, SectionInd
                 wordArrayList = (ArrayList<Word>) filterResults.values; //filter dalam arraylist ni
 
                 notifyDataSetChanged();
-               // Log.d("abc", "running: ade masalah bro..." + charSequence.length());
+                // Log.d("abc", "running: ade masalah bro..." + charSequence.length());
 
             }
         };
@@ -181,18 +181,18 @@ public class CustomAdapter extends BaseAdapter implements Filterable, SectionInd
     @Override
     public int getPositionForSection(int i)
     {
-       // Log.d("getPositonForSection"," "+i);
+        // Log.d("getPositonForSection"," "+i);
         return mapIndex.get(sections[i]);
     }
 
     @Override
     public int getSectionForPosition(int i)
     {
-       // Log.d("getSectionForPosition"," "+ i);
+        // Log.d("getSectionForPosition"," "+ i);
         return 0;
     }
 
-   public void refresh(ArrayList<Word> items)
+    public void refresh(ArrayList<Word> items)
     {
         this.arrayList = items;
         notifyDataSetChanged();
@@ -206,6 +206,4 @@ public class CustomAdapter extends BaseAdapter implements Filterable, SectionInd
             itemName = (TextView) view.findViewById(R.id.test);
         }
     }
-
-
 }

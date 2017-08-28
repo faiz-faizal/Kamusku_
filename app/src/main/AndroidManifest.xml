@@ -26,7 +26,8 @@
         <activity
             android:name=".PopUp"
             android:label="PopUpActivity"></activity>
-        <activity android:name=".BookmarkActivity"></activity>
+        <activity android:name=".BookmarkActivity"
+            android:label="Bookmark"></activity>
     </application>
 
 </manifest>
