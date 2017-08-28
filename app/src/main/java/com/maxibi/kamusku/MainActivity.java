@@ -26,8 +26,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.maxibi.kamusku.Word;
-
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
