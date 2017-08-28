@@ -1,0 +1,26 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorAccentLightBlue</item>
+        <item name="colorPrimaryDark">@color/colorDarkAccentLightBlue</item>
+
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/colorDarkAccentLightBlue</item>
+
+
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="AppTheme" />
+
+    <style name="AppTheme.PopupOverlay" parent="AppTheme" />
+
+
+
+</resources>

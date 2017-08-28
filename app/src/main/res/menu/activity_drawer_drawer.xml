@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_bookmark"
+            android:icon="@mipmap/ic_favorite_border_black_24dp"
+            android:title="Bookmark" />
+        <item
+            android:id="@+id/nav_Theme"
+            android:icon="@mipmap/ic_menu_night_mode"
+            android:title="Night Mode" />
+        <item
+            android:id="@+id/nav_About"
+            android:icon="@mipmap/ic_info_black_24dp"
+            android:title="About" />
+
+    </group>
+
+    <group android:checkableBehavior="single">
+    <item android:title="Other">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Share" />
+
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@mipmap/ic_exit_to_app_black_24dp"
+                android:title="Exit" />
+
+            <!--<item
+                android:id="@+id/nav_rate"
+                android:icon="@mipmap/ic_thumb_up_black_24dp"
+                android:title="Rate this app" /><-->
+
+        </menu>
+    </item>
+    </group>
+
+</menu>
