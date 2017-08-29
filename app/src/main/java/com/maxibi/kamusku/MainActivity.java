@@ -87,8 +87,15 @@ public class MainActivity extends AppCompatActivity
                         return true;
                     case R.id.nav_About:
                         AlertDialog.Builder a_builder1 = new AlertDialog.Builder(MainActivity.this);
-                        a_builder1.setMessage("KamusKu version 1.0 from Maxibi IT Solutions. blablablablablablablablablablablabla" +
-                                "developer Faiz Faizal");
+                        a_builder1.setMessage("Aplikasi KamusKu adalah sebuah Kamus yang memberi maksud untuk sesebuah perkataan" +
+                                " daripada Bahasa Melayu kepada Bahasa Inggeris." +"\n" +
+                                "\n" +
+                                "Kamusku adalah dibawah keluaran Syarikat Maxibi IT Solutions." +
+                                "\n" + "\n" +
+                                "Website: https://www.maxibi.com" + "\n" + "\n" +
+                                "Developer: Faiz Faizal" + "\n" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                                "Nur Ain Basyirah" + "\n" + "\n" +
+                                "Semua hak cipta adalah terpelihara.");
                         AlertDialog alert1 = a_builder1.create();
                         alert1.setTitle("KamusKu 1.0");
                         alert1.show();
