@@ -21,7 +21,7 @@
         android:layout_marginLeft="24dp"
         android:layout_marginStart="24dp"
         android:src="@drawable/logo"
-        app:border_color="#FF000000" />
+        app:border_color="?attr/textColorBlack" />
 
     <TextView
         android:id="@+id/namakamus"
@@ -33,7 +33,7 @@
         android:gravity="left"
         android:paddingBottom="4dp"
         android:text="KamusKu"
-        android:textColor="#000000"
+        android:textColor="?attr/textColorBlack"
         android:textSize="14sp"
         android:textStyle="bold" />
 
@@ -47,7 +47,7 @@
         android:layout_marginBottom="8dp"
         android:gravity="left"
         android:text="maxibi.com"
-        android:textColor="#000000"
+        android:textColor="?attr/textColorBlack"
         android:textSize="14sp" />
 
 </RelativeLayout>

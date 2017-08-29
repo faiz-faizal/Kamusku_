@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
         android:text="testing"
-        android:textColor="@color/colorDarkAccentLightBlue"
+        android:textColor="?attr/textColorBlue"
         android:textSize="19dp" />
 
 </LinearLayout>

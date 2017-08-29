@@ -9,7 +9,7 @@
     android:layout_marginRight="20dp"
     android:layout_marginTop="5dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.maxibi.testing.MainActivity"
+    tools:context="com.maxibi.kamusku.MainActivity"
     tools:showIn="@layout/app_bar_drawer">
 
     <LinearLayout
@@ -41,9 +41,8 @@
                 android:hint="Cari"
                 android:lines="1"
                 android:textAlignment="center"
-                android:textColor="@color/colorAccentLightBlue"
-                android:textColorHint="#d9000000"
-                android:textColorLink="@android:color/holo_orange_dark"
+                android:textColor="?attr/textColorBlue"
+                android:textColorHint="?attr/textColorBlack"
                 android:textStyle="bold" />
 
         </LinearLayout>

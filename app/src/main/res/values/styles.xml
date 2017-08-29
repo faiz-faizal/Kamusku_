@@ -1,7 +1,7 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppThemeDay" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorAccentLightBlue</item>
         <item name="colorPrimaryDark">@color/colorDarkAccentLightBlue</item>
@@ -9,17 +9,44 @@
         <!-- active thumb & track color (30% transparency) -->
         <item name="colorControlActivated">@color/colorDarkAccentLightBlue</item>
 
+        <item name="textColorBlack">@color/colorBlack</item>
+        <item name="textColorBlue">@color/colorDarkAccentLightBlue</item>
+        <item name="textColorWhite">@color/colorWhite</item>
+
+        <item name="colorBlue">@color/colorDarkAccentLightBlue</item>
+        <item name="colorBlue4F">@color/colorDarkAccentLightBlue4F</item>
+        <item name="colorBlue8B">@color/colorDarkAccentLightBlue8B</item>
+        <item name="colorWhite">@color/colorWhite</item>
+        <item name="colorColorless">@color/colorless</item>
 
     </style>
 
-    <style name="AppTheme.NoActionBar">
+    <style name="AppThemeNight" parent = "Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorAccentLightBlack</item>
+        <item name="colorPrimaryDark">@color/colorDarkAccentLightBlack</item>
+
+        <item name="colorControlActivated">@color/colorDarkAccentLightBlack</item>
+
+        <item name="textColorBlack">@color/colorWhite</item>
+        <item name="textColorBlue">@color/colorWhite</item>
+        <item name="textColorWhite">@color/colorWhite</item>
+        <item name="colorBlue">@color/colorDarkAccentLightBlue</item>
+
+        <item name="colorBlue4F">#4f514444</item>
+        <item name="colorBlue8B">#8b312929</item>
+        <item name="colorWhite">#9f9f9f</item>
+        <item name="colorColorless">@color/colorless</item>
+
+    </style>
+
+    <style name="AppThemeDay.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="AppTheme" />
+    <style name="AppTheme.AppBarOverlay" parent="AppThemeNight" />
 
-    <style name="AppTheme.PopupOverlay" parent="AppTheme" />
+    <style name="AppTheme.PopupOverlay" parent="AppThemeNight" />
 
 
 

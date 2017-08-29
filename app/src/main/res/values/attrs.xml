@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="textColorBlack" format="color"/>
+    <attr name="textColorBlue" format="color"/>
+    <attr name="colorBlue" format="color"/>
+    <attr name="colorBlue8B" format="color"/>
+    <attr name="colorBlue4F" format="color"/>
+    <attr name="colorWhite" format="color"/>
+    <attr name="colorColorless" format="color"/>
+    <attr name="textColorWhite" format="color"/>
+
+</resources>
