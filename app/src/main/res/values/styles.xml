@@ -10,9 +10,9 @@
         <item name="colorControlActivated">@color/colorDarkAccentLightBlue</item>
 
         <item name="textColorBlack">@color/colorBlack</item>
-        <item name="textColorBlue">@color/colorDarkAccentLightBlue</item>
+        <item name="textColorBlue">@color/colorBlack</item>
         <item name="textColorWhite">@color/colorWhite</item>
-        <item name="textColorItem">@color/colorWhite</item>
+        <item name="textColorItem">@color/colorBlack</item>
 
         <item name="background_main">@color/colorWhite</item>
 
@@ -22,7 +22,7 @@
         <item name="colorWhite">@color/colorBlack</item>
         <item name="colorColorless">@color/colorless</item>
 
-        <item name="navigationBackground">@color/colorWhite</item>
+        <item name="navigationBackground">#c8ffffff</item>
 
     </style>
 
@@ -37,9 +37,9 @@
         <item name="textColorWhite">@color/colorWhite</item>
         <item name="textColorItem">@color/colorWhite</item>
 
-        <item name="background_main">@color/colorAccentLightBlack</item>
+        <item name="background_main">#a0a0a0</item>
 
-        <item name="colorBlue">#9f9f9f</item>
+        <item name="colorBlue">#393939</item>
         <item name="colorBlue4F">#a4180f0f</item>
         <item name="colorBlue8B">#8b312929</item>
         <item name="colorWhite">#9f9f9f</item>
@@ -55,9 +55,9 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="AppThemeNight" />
+    <!--<style name="AppTheme.AppBarOverlay" parent="AppThemeDay" />-->
 
-    <style name="AppTheme.PopupOverlay" parent="AppThemeNight" />
+    <!--<style name="AppTheme.PopupOverlay" parent="AppThemeDay" />-->
 
 
 
