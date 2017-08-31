@@ -5,7 +5,6 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/textColorWhite"
     tools:context="com.maxibi.kamusku.MainActivity"
     tools:openDrawer="start">
 
@@ -28,6 +27,7 @@
         android:layout_gravity="start"
         android:background="@drawable/navigation_style"
         android:fitsSystemWindows="true"
+        app:itemTextColor="?attr/textColorItem"
         app:headerLayout="@layout/nav_header_drawer"
         app:menu="@menu/activity_drawer_drawer" />
 

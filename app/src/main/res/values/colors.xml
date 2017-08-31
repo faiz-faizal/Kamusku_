@@ -20,8 +20,8 @@
 
 
     <!--Night color-->
-    <color name="colorAccentLightBlack">#767676</color>
-    <color name="colorDarkAccentLightBlack">#434343</color>
+    <color name="colorAccentLightBlack">#434343</color>
+    <color name="colorDarkAccentLightBlack">#232323</color>
 
 
 </resources>

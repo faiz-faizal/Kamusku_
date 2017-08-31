@@ -3,11 +3,16 @@
 
     <attr name="textColorBlack" format="color"/>
     <attr name="textColorBlue" format="color"/>
+    <attr name="textColorItem" format="color"/>
+    <attr name="textColorWhite" format="color"/>
+
     <attr name="colorBlue" format="color"/>
     <attr name="colorBlue8B" format="color"/>
     <attr name="colorBlue4F" format="color"/>
     <attr name="colorWhite" format="color"/>
     <attr name="colorColorless" format="color"/>
-    <attr name="textColorWhite" format="color"/>
+
+    <attr name="background_main" format="color"/>
+    <attr name="navigationBackground" format="color"/>
 
 </resources>

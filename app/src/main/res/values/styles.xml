@@ -12,12 +12,17 @@
         <item name="textColorBlack">@color/colorBlack</item>
         <item name="textColorBlue">@color/colorDarkAccentLightBlue</item>
         <item name="textColorWhite">@color/colorWhite</item>
+        <item name="textColorItem">@color/colorWhite</item>
+
+        <item name="background_main">@color/colorWhite</item>
 
         <item name="colorBlue">@color/colorDarkAccentLightBlue</item>
         <item name="colorBlue4F">@color/colorDarkAccentLightBlue4F</item>
         <item name="colorBlue8B">@color/colorDarkAccentLightBlue8B</item>
-        <item name="colorWhite">@color/colorWhite</item>
+        <item name="colorWhite">@color/colorBlack</item>
         <item name="colorColorless">@color/colorless</item>
+
+        <item name="navigationBackground">@color/colorWhite</item>
 
     </style>
 
@@ -30,12 +35,18 @@
         <item name="textColorBlack">@color/colorWhite</item>
         <item name="textColorBlue">@color/colorWhite</item>
         <item name="textColorWhite">@color/colorWhite</item>
-        <item name="colorBlue">@color/colorDarkAccentLightBlue</item>
+        <item name="textColorItem">@color/colorWhite</item>
 
-        <item name="colorBlue4F">#4f514444</item>
+        <item name="background_main">@color/colorAccentLightBlack</item>
+
+        <item name="colorBlue">#9f9f9f</item>
+        <item name="colorBlue4F">#a4180f0f</item>
         <item name="colorBlue8B">#8b312929</item>
         <item name="colorWhite">#9f9f9f</item>
         <item name="colorColorless">@color/colorless</item>
+
+        <item name="navigationBackground">#a4a0a0a0</item>
+
 
     </style>
 

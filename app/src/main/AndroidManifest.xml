@@ -12,7 +12,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppThemeDay.NoActionBar"></activity>
+            android:theme="@style/AppThemeNight"></activity>
         <activity
             android:name=".SplashActivity"
             android:label="Kamusku"
@@ -25,9 +25,13 @@
         </activity>
         <activity
             android:name=".PopUp"
-            android:label="PopUpActivity"></activity>
+            android:label="PopUpActivity"
+            android:theme="@style/AppThemeNight">
+        </activity>
+        
         <activity android:name=".BookmarkActivity"
-            android:label="Bookmark"></activity>
+            android:label="Bookmark"
+            android:theme="@style/AppThemeNight"></activity>
     </application>
 
 </manifest>
