@@ -6,4 +6,21 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string-array name="themes">
+        <item>Day</item>
+        <item>Night</item>
+    </string-array>
+
+    <string name="OK">OK</string>
+    <string name="def_theme">AppThemeDay</string>
+    <string name="theme_summary">Appearance</string>
+    <string name="theme_dialog_title">Theme</string>
+    <string name="settings">Theme</string>
+
+
+    <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
+    <string name="level_one">Level One</string>
+    <string name="level_two">Level Two</string>
+    <string name="ad_id_banner">ca-app-pub-6007619109559679~3210472884</string>
 </resources>

@@ -2,9 +2,11 @@ package com.maxibi.kamusku;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -29,10 +31,10 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     final String TAG = this.getClass().getName();
+    private int SETTINGS_ACTION = 1;
     public ListView listView;
     //public Button buttonSearch;
     public EditText editText;
@@ -49,7 +51,18 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
-        AppCompatDelegate.setDefaultNightMode( AppCompatDelegate.MODE_NIGHT_AUTO);
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        String themeName = pref.getString("theme","Day");
+
+        if(themeName.equals("Day"))
+        {
+            setTheme(R.style.AppThemeDay);
+        }
+        else if(themeName.equals("Night"))
+        {
+            setTheme(R.style.AppThemeNight);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -93,7 +106,8 @@ public class MainActivity extends AppCompatActivity
                                 "Kamusku adalah dibawah keluaran Syarikat Maxibi IT Solutions." +
                                 "\n" + "\n" +
                                 "Website: https://www.maxibi.com" + "\n" + "\n" +
-                                "Developer: Faiz Faizal" + "\n" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" + "\t" +
+                                "Developer: \n" +
+                                "Faiz Faizal \n" +
                                 "Nur Ain Basyirah" + "\n" + "\n" +
                                 "Semua hak cipta adalah terpelihara.");
                         AlertDialog alert1 = a_builder1.create();
@@ -218,8 +232,8 @@ public class MainActivity extends AppCompatActivity
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.drawer, menu);
-        return true;
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
     @SuppressWarnings("StatementWithEmptyBody")
@@ -261,5 +275,25 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        switch (id) {
+            case R.id.themes:
+                startActivityForResult(new Intent(this, ThemePreferenceActivity.class), SETTINGS_ACTION);
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == SETTINGS_ACTION) {
+            if (resultCode == ThemePreferenceActivity.RESULT_CODE_THEME_UPDATE) {
+                finish();
+                startActivity(getIntent());
+                return;
+            }
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
 }

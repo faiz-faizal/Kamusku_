@@ -5,6 +5,7 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorAccentLightBlue</item>
         <item name="colorPrimaryDark">@color/colorDarkAccentLightBlue</item>
+        <item name="android:textColorPrimary">@color/colorDarkAccentLightBlack</item>
 
         <!-- active thumb & track color (30% transparency) -->
         <item name="colorControlActivated">@color/colorDarkAccentLightBlue</item>
@@ -29,6 +30,7 @@
     <style name="AppThemeNight" parent = "Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorAccentLightBlack</item>
         <item name="colorPrimaryDark">@color/colorDarkAccentLightBlack</item>
+        <item name="android:textColorPrimary">@color/colorDarkAccentLightBlack</item>
 
         <item name="colorControlActivated">@color/colorDarkAccentLightBlack</item>
 

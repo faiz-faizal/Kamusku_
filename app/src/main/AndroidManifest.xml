@@ -32,6 +32,8 @@
             android:label="Bookmark">
 
         </activity>
+        <activity android:name=".ThemePreferenceActivity"
+            android:theme="@style/Theme.AppCompat.CompactMenu"></activity>
     </application>
 
 </manifest>

@@ -1,7 +1,9 @@
 package com.maxibi.kamusku;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -25,6 +27,18 @@ public class BookmarkActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        SharedPreferences pref = PreferenceManager.getDefaultSharedPreferences(this);
+        String themeName = pref.getString("theme","Day");
+
+        if(themeName.equals("Day"))
+        {
+            setTheme(R.style.AppThemeDay);
+        }
+        else if(themeName.equals("Night"))
+        {
+            setTheme(R.style.AppThemeNight);
+        }
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bookmark);
 
