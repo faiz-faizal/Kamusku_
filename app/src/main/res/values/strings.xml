@@ -25,5 +25,5 @@
     <string name="ad_id_banner">ca-app-pub-6007619109559679~3210472884</string> -->
 
     <!-- AdMob ad unit IDs -->
-    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111w</string>
+    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111</string>
 </resources>

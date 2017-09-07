@@ -7,6 +7,7 @@ import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -22,6 +23,7 @@ public class BookmarkActivity extends AppCompatActivity {
     DatabaseAccess databaseAccess;
     ArrayList<Word> quotes;
     CustomAdapter customAdapter;
+    private int SETTINGS_ACTION = 1;
 
 
 
@@ -83,10 +85,5 @@ public class BookmarkActivity extends AppCompatActivity {
         customAdapter.refresh(quotes);
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        setTitle("My new title");
-        return true;
-    }
+
 }
