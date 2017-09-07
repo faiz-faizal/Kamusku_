@@ -136,7 +136,7 @@ public class CustomAdapter extends BaseAdapter implements Filterable, SectionInd
                     for( int i = 0; i < wordArrayList.size(); i++ )
                     {
                         Word data = wordArrayList.get(i);
-                        if( data.getBm().toLowerCase().startsWith(charSequence.toString()))
+                        if( data.getBm().toLowerCase().startsWith(charSequence.toString()) || data.getBm().toLowerCase().contains(charSequence.toString()))
                         {
                             tempArrayList.add(data);
 

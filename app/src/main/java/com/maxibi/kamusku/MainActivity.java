@@ -115,8 +115,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                                 "Website: https://www.maxibi.com" + "\n" + "\n" +
                                 "Developer: \n" +
                                 "Faiz Faizal \n" +
-                                "Nur Ain Basyirah" + "\n" + "\n" +
-                                "Semua hak cipta adalah terpelihara.");
+                                "Nur Ain Basyirah" + "\n" + "\n");
                         AlertDialog alert1 = a_builder1.create();
                         alert1.setTitle("KamusKu 1.0");
                         alert1.show();
