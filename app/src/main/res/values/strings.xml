@@ -18,9 +18,12 @@
     <string name="theme_dialog_title">Theme</string>
     <string name="settings">Theme</string>
 
-
+    <!--
     <string name="interstitial_ad_sample">Interstitial Ad Sample</string>
     <string name="level_one">Level One</string>
     <string name="level_two">Level Two</string>
-    <string name="ad_id_banner">ca-app-pub-6007619109559679~3210472884</string>
+    <string name="ad_id_banner">ca-app-pub-6007619109559679~3210472884</string> -->
+
+    <!-- AdMob ad unit IDs -->
+    <string name="banner_home_footer">ca-app-pub-3940256099942544/6300978111w</string>
 </resources>

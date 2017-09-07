@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.maxibi.kamusku.MainActivity"
     tools:showIn="@layout/app_bar_drawer"
     android:background="@drawable/linearlayout_corner_style"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:layout_marginRight="20dp"
-            android:layout_marginLeft="20dp"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="20dp"
-            android:layout_marginTop="5dp">
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:id="@+id/linearLayout"
+            android:weightSum="1">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -28,20 +30,20 @@
                     android:layout_marginRight="10dp"
                     android:layout_marginTop="10dp">
 
-                    <EditText
-                        android:id="@+id/editText"
-                        android:layout_width="0dp"
-                        android:layout_height="40dp"
-                        android:layout_weight="4"
-                        android:background="@drawable/edit_text_style"
-                        android:focusable="true"
-                        android:focusableInTouchMode="true"
-                        android:hint="Cari"
-                        android:lines="1"
-                        android:textAlignment="center"
-                        android:textColor="?attr/textColorBlue"
-                        android:textColorHint="?attr/textColorBlack"
-                        android:textStyle="bold" />
+                        <EditText
+                            android:id="@+id/editText"
+                            android:layout_width="0dp"
+                            android:layout_height="40dp"
+                            android:layout_weight="4"
+                            android:background="@drawable/edit_text_style"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:hint="Cari"
+                            android:lines="1"
+                            android:textAlignment="center"
+                            android:textColor="?attr/textColorBlue"
+                            android:textColorHint="?attr/textColorBlack"
+                            android:textStyle="bold" />
 
                 </LinearLayout>
 
@@ -53,14 +55,22 @@
                         <ListView
                             android:id="@+id/listView"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="400dp"
                             android:background="@drawable/list_view_style"
-                            android:fastScrollEnabled="true">
-                        </ListView>
+                            android:fastScrollEnabled="true"></ListView>
 
                 </LinearLayout>
 
         </LinearLayout>
 
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_home_footer"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"></com.google.android.gms.ads.AdView>
 
-</LinearLayout>
+
+</RelativeLayout>

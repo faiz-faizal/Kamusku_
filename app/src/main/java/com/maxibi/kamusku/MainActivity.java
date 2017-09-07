@@ -28,6 +28,9 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
+import com.google.android.gms.ads.AdListener;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 
@@ -47,6 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private DatabaseAccess databaseAccess;
     private ArrayList<Word> quotes;
     private CustomAdapter customAdapter;
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,6 +81,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         ibBookmark = (ImageButton)findViewById(R.id.ibBookmark);
 
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         ////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -116,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                         return true;
                     case R.id.nav_share:
                         //only support png image
-                        Uri imageUri = Uri.parse("android.resource://com.maxibi.testing/drawable/"+R.drawable.logo);
+                        Uri imageUri = Uri.parse("android.resource://com.maxibi.testing/drawable/"+R.mipmap.ic_launcher);
                         Intent chooser;
                         Intent intent = new Intent(Intent.ACTION_SEND);
                         intent.setType("image/*");
@@ -224,6 +231,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     @Override
     protected void onResume() {
         super.onResume();
+        if (mAdView != null) {
+            mAdView.resume();
+        }
         databaseAccess.open();
         quotes = databaseAccess.getQuotes();
         customAdapter.refresh(quotes);
